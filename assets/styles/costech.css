@@ -1,9 +1,11 @@
 :root
 {
     --color-begin-blue: #0094FF;
+    --color-faded-blue: #ff94FF35;
     --color-middle-blue: #2E29FF;
     --color-greybox: #1E1E1E;
     --color-highlight-greybox: #2A2A2A;
+    --color-link: purple;
 }
 
 html
@@ -74,13 +76,14 @@ body
     justify-content: center;
 }
 
-.link
+.link, .link:visited
 {
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--color-faded-blue);
     transition: text-decoration 300ms ease;
 }
 
-.link:visited, .link:hover
+.link:hover
 {
     text-decoration: underline;
     transition: text-decoration 300ms ease;
@@ -102,7 +105,7 @@ body
     font-size: 2em;
 }
 
-.table
+.table, .table2
 {
     border-spacing: 30px;
 }
@@ -113,6 +116,16 @@ body
 }
 
 .table > tbody > tr > td:nth-of-type(3)
+{
+    text-align: right;
+}
+
+.table2 > tbody > tr > td:nth-of-type(1)
+{
+    text-align: left;
+}
+
+.table2 > tbody > tr > td:nth-of-type(2)
 {
     text-align: right;
 }
