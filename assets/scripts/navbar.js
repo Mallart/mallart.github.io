@@ -37,7 +37,6 @@ class NavBar
             this.node.appendChild(_link);
         }
         document.body.prepend(this.node);
-        console.log("Instantiated navbar.");
     }
 };
 
@@ -49,4 +48,3 @@ let defaultLinks = [
 ]
 
 new NavBar(defaultLinks).Instantiate();
-console.log("Instantiated navbar.");

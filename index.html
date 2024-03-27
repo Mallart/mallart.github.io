@@ -19,23 +19,11 @@
                 <span style="width:2px;display: inline-block; margin-top: 20%;"></span>
                 <section id="Projects" class="center glass">
                     <h2  class="title text">Projects</h2>
-                    <div>
                         <table class="greybox table">
                             <tbody class="text">
-                                <tr>
-                                    <td></td>
-                                    <td><a class="link" href="https://github.com/Mallart/string2">string2</a></td>
-                                    <td>portable C language string.h extension</td>
-                                </tr>
-                                <tr>
-                                    <td>Incoming</td>
-                                    <td><a class="link" href="https://github.com/Mallart/DecodeNMEA">DecodeNMEA</a></td>
-                                    <td>NMEA 0183 decoder</td>
-                                </tr>
 
-                            </table>
-                        </tbody>
-                    </div>
+                            </tbody>
+                        </table>
                 </section>
             </article>
             <article>
@@ -48,75 +36,17 @@
                     <h2  class="text title">Skills</h2>
                     <table class="greybox table2 list">
                         <tbody class="text">
-                            <tr>
-                                <td>C</td>
-                                <td>Standard, WinApi, Unix and Arduino</td>
-                            </tr>
-                            <tr>
-                                <td>C++</td>
-                                <td>STD (standard), Unreal Engine</td>
-                            </tr>
-                            <tr>
-                                <td>C#</td>
-                                <td>.NET Framework, Unity</td>
-                            </tr>
-                            <tr>
-                                <td>Java</td>
-                                <td>Standard Java, SpigotMC, ForgeMC</td>
-                            </tr>
-                            <tr>
-                                <td>Ada</td>
-                                <td>Standard Ada</td>
-                            </tr>
-                            <tr>
-                                <td>Python</td>
-                                <td>Standard Python</td>
-                            </tr>
-                            <tr>
-                                <td>JavaScript</td>
-                                <td>ES6, ReactJS, NodeJS</td>
-                            </tr>
-                            <tr>
-                                <td>PHP</td>
-                                <td>Standard PHP, Database linking</td>
-                            </tr>
-                            <tr>
-                                <td>SQL</td>
-                                <td>Standard SQL, Oracle APEX, MS Access</td>
-                            </tr>
-                            <tr>
-                                <td>NoSQL</td>
-                                <td>MongoDB</td>
-                            </tr>
-                            <tr>
-                                <td>Wordpress</td>
-                                <td>Standard Wordpress using</td>
-                            </tr>
-                            <tr>
-                                <td>HTML / CSS</td>
-                                <td>HTML5, CSS3</td>
-                            </tr>
-                            <tr>
-                                <td>Assembly</td>
-                                <td><span style="font-weight: bolder;">Theoretical</span> knowlegde about: x86, x64, NASM, MASM</td>
-                            </tr>
-                        </table>
-                    </tbody>
+
+                        </tbody>
+                    </table>
                 </section>
             </article>
             <article>
                 <section id="Documents" class="center glass">
                     <h2 class="text title">Documents</h2>
                     <h3 class="text subtitle">Basically some researches or tutorials I did</h3>
-                    <p></p>
                     <table class="greybox table2 list">
                         <caption class="text">More coming soon !</caption>
-                        <tbody class="text">
-                            <tr>
-                                <th>Document name</th>
-                                <th>Brief description</th>
-                            </tr>
-                        </tbody>
                         <tbody class="text">
 
                         </tbody>
@@ -132,5 +62,39 @@
         </main>
     </body>
 
-    <script type="text/javascript" src="./assets/scripts/navbar.js"></script>
+    <script type="text/javascript" src="./assets/scripts/Navbar.js"></script>
+    <script type="text/javascript" src="./assets/scripts/TableGenerator.js"></script>
+    <script type="text/javascript">
+        let projects = [
+            ['', 'string2', 'portable C language string.h extension'],
+            ['Incoming', 'string2', 'portable C language string.h extension'],
+        ];
+
+        let skills = [
+            ['C',           'Standard, WinApi, Unix and Arduino'],
+            ['C++',         'STD (standard), Unreal Engine'],
+            ['C#',          '.NET Framework, Unity'],
+            ['Java',        'Standard Java, SpigotMC, ForgeMC'],
+            ['Ada',         'Standard Ada'],
+            ['Python',      'Standard Python'],
+            ['JavaScript',  'ES6, ReactJS, NodeJS'],
+            ['PHP',         'Standard PHP, Database linking'],
+            ['SQL',         'Standard SQL, Oracle APEX, MS Access'],
+            ['NoSQL',       'MongoDB'],
+            ['Wordpress',   'Standard Wordpress using'],
+            ['HTML / CSS',  'HTML5, CSS3'],
+            ['Assembly',    'Theoretical knowlegde about: x86, x64, NASM, MASM'],
+        ];
+        
+        let docs = [
+            [],
+        ];
+
+        for(let i = 0; i < projects.length; ++i)
+            InsertRowInTableBody(document.querySelector("#Projects > table > tbody"), projects[i]);
+        for(let i = 0; i < skills.length; ++i)
+            InsertRowInTableBody(document.querySelector("#Skills > table > tbody"), skills[i]);
+        for(let i = 0; i < docs.length; ++i)
+            InsertRowInTableBody(document.querySelector("#Documents > table > tbody"), docs[i]);
+    </script>
 </html>
