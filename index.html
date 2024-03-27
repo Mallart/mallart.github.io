@@ -66,8 +66,8 @@
     <script type="text/javascript" src="./assets/scripts/TableGenerator.js"></script>
     <script type="text/javascript">
         let projects = [
-            ['', 'string2', 'portable C language string.h extension'],
-            ['Incoming', 'string2', 'portable C language string.h extension'],
+            ['', ['string2', 'https://github.com/Mallart/string2'], 'portable C language string.h extension'],
+            ['Incoming', ['DecodeNMEA', 'https://github.com/Mallart/DecodeNMEA'], 'NMEA 0183 Decoder'],
         ];
 
         let skills = [
@@ -91,10 +91,10 @@
         ];
 
         for(let i = 0; i < projects.length; ++i)
-            InsertRowInTableBody(document.querySelector("#Projects > table > tbody"), projects[i]);
+            InsertLinkInTableBody(document.querySelector("#Projects > table > tbody"), projects[i]);
         for(let i = 0; i < skills.length; ++i)
             InsertRowInTableBody(document.querySelector("#Skills > table > tbody"), skills[i]);
         for(let i = 0; i < docs.length; ++i)
-            InsertRowInTableBody(document.querySelector("#Documents > table > tbody"), docs[i]);
+            InsertLinkInTableBody(document.querySelector("#Documents > table > tbody"), docs[i]);
     </script>
 </html>
