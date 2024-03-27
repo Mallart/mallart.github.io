@@ -16,7 +16,11 @@ html
 body
 {
     background-color: black;
-    scroll-behavior: smooth;
+    background-image: url('../medias/background.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .center
@@ -30,6 +34,19 @@ body
 .center > *
 {
     text-align: center;
+}
+
+.footer
+{
+    margin-top: 50px;
+    padding: 0 20px 0 20px;
+    display: grid;
+    text-align: left;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: var(--color-greybox);
+    width: calc(100% - 40px);
+    left:0;
+    bottom: 0;
 }
 
 .navbar
@@ -59,7 +76,8 @@ body
 
 .greybox
 {
-    background-color: black;
+    background-color: #00000090;
+    backdrop-filter: blur(5px);
     border-width: 5px;
     border-style: solid;
     border-radius: 100px;
@@ -93,6 +111,11 @@ body
 .list > tbody > tr > td:nth-child(1):before
 {
     content: '• ';
+}
+
+p.text
+{
+    font-size: 1em;
 }
 
 .text
