@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Matheo Allart</title>
+        <title>Mathéo Allart</title>
         <meta charset="utf8">
         <link rel="icon" href="./assets/medias/Logo.png">
         <link rel="stylesheet" href="./assets/styles/costech.css">
@@ -66,8 +66,10 @@
     <script type="text/javascript" src="./assets/scripts/TableGenerator.js"></script>
     <script type="text/javascript">
         let projects = [
-            ['', ['string2', 'https://github.com/Mallart/string2'], 'portable C language string.h extension'],
-            ['', ['DecodeNMEA', 'https://github.com/Mallart/DecodeNMEA'], 'NMEA 0183 Decoder'],
+            Project('https://github.com/Mallart/string2', 'Portable C language string.h extension'),
+            Project('https://github.com/Mallart/DecodeNMEA', 'NMEA 0183 Decoder in C'),
+            Project('https://github.com/Mallart/tartiflette', 'Java client customer application for cheeses'),
+            Project('https://github.com/Mallart/ProcHacker', 'C#.NET app to change the name of your CPU (Windows)'),
         ];
 
         let skills = [
@@ -78,7 +80,7 @@
             ['Ada',         'Standard Ada'],
             ['Python',      'Standard Python'],
             ['JavaScript',  'ES6, ReactJS, NodeJS'],
-            ['PHP',         'Standard PHP, Database linking'],
+            ['PHP',         'Standard PHP, Database linking (PDO, mysqli)'],
             ['SQL',         'Standard SQL, Oracle APEX, MS Access'],
             ['NoSQL',       'MongoDB'],
             // ['Wordpress',   'Standard Wordpress using'],
@@ -90,11 +92,8 @@
             [],
         ];
 
-        for(let i = 0; i < projects.length; ++i)
-            InsertLinkInTableBody(document.querySelector("#Projects > table > tbody"), projects[i]);
-        for(let i = 0; i < skills.length; ++i)
-            InsertRowInTableBody(document.querySelector("#Skills > table > tbody"), skills[i]);
-        for(let i = 0; i < docs.length; ++i)
-            InsertLinkInTableBody(document.querySelector("#Documents > table > tbody"), docs[i]);
+        projects.forEach(_prj => { InsertLinkInTableBody(document.querySelector("#Projects > table > tbody"), _prj); });
+        skills.forEach(_skill => { InsertLinkInTableBody(document.querySelector("#Skills > table > tbody"), _skill); });
+        docs.forEach(_doc => { InsertLinkInTableBody(document.querySelector("#Documents > table > tbody"), _doc); });
     </script>
 </html>

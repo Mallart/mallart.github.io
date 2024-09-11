@@ -18,7 +18,7 @@ body
     background-color: black;
     background-image: url('../medias/background.png');
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
