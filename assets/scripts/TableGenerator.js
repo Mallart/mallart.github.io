@@ -6,12 +6,20 @@ function Project(url, desc="No description yet !")
     return _project;
 }
 
-// Work-in-progresss project
+// Work-in-progress project
 function WIPProject(url, desc="No description yet !")
 {
     let _project = ['', [url.split('/')[url.split('/').length - 1], url], desc]; 
     _project[1][0] = _project[1][0].charAt(0).toUpperCase() + _project[1][0].slice(1);
     return ['In progress', [url.split('/')[url.split('/').length - 1], url], desc];
+}
+
+// Work-in-progress private project
+function PrvProject(url, desc="No description yet !")
+{
+    let _project = ['', [url.split('/')[url.split('/').length - 1], url], desc]; 
+    _project[1][0] = _project[1][0].charAt(0).toUpperCase() + _project[1][0].slice(1);
+    return ['Private', [url.split('/')[url.split('/').length - 1], url], desc];
 }
 
 function InsertRowInTableBody(tbody, row_values_array)
